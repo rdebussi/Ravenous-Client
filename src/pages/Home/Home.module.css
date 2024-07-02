@@ -1,0 +1,18 @@
+.home {
+    padding-inline: 5rem;
+}
+
+.home h2 {
+    font-weight: 400;
+}
+
+.list {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+

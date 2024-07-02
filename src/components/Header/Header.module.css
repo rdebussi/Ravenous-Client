@@ -1,0 +1,109 @@
+/* Header.css */
+
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-bottom: 1px solid green;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 2rem;
+}
+
+.title {
+    text-align: start;
+    font-size: 1.7rem;
+    color: green;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    color: rgb(0, 0, 0);
+    gap: .85rem;
+    font-size: .95rem;
+}
+
+.navItem {
+    color: black;
+}
+
+.navItem:hover {
+    cursor: pointer;
+    color: green;
+}
+
+
+
+.vegetarian {
+    color: green;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .1rem;
+}
+
+.searchIcon {
+    color: green;
+    font-size: 1.5rem;
+}
+
+.searchInput {
+    width: 30rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    border: none;
+    padding-inline: 1rem;
+    font-size: 1rem;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding-right: 5rem;
+}
+
+.address {
+    color: rgb(0, 0, 0);
+    font-size: .85rem;
+    font-weight: 400;
+}
+
+.loginButton {
+    width: 3.5rem;
+    height: 1.5rem;
+    border-radius: .4rem;
+    border: none;
+    background-color: green;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.cartIcon {
+    font-size: 2rem;
+    cursor: pointer;
+    color: green;
+}
+
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 

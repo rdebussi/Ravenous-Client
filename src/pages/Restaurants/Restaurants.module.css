@@ -1,0 +1,17 @@
+
+
+.title {
+    font-weight: 200;
+    color: black;
+}
+
+.restaurant_list {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
