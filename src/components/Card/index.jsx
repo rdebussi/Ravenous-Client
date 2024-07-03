@@ -2,9 +2,9 @@ import styles from './Card.module.css'
 import hb from '/hamburguer.webp'
 import bk from '/bk.png'
 
-function Card ({ name, price }) {
+function Card ({ name, price, onClick }) {
     return (
-        <section className={styles.card}>
+        <section className={styles.card} onClick={onClick}>
 
             <div className={styles.product}>
                 <img className={styles.product_pic} src={hb} alt="" />

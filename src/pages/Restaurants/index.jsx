@@ -33,7 +33,10 @@ function Restaurants() {
                 }
               </section>
             ) : (
-              <p>nenhum produto encontrado</p>
+              <>
+                <p>nenhum produto encontrado</p>
+              </>
+
             )
           }
         </section>
