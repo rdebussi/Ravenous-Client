@@ -1,5 +1,5 @@
 .card {
-    width: 300px;
+    width: 290px;
     height: 390px;
     display: flex;
     flex-direction: column;
@@ -18,8 +18,8 @@
 }
 
 .product_pic {
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 270px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }

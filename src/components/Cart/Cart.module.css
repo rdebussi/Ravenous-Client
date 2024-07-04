@@ -68,11 +68,12 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: .5rem;
+    gap: .7rem;
   }
 
   .product_img {
-    width: 80px;
+    width: 70px;
+    height: 90%;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }

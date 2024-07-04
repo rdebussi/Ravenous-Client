@@ -17,7 +17,7 @@ function Cart({ items, onClose, totalPrice, restaurantName }) {
           <div className={styles.products}>
               {items.map((item, index) => (
                 <div className={styles.product} key={index}>
-                  <img className={styles.product_img} src={hb} alt={item.name} />
+                  <img className={styles.product_img} src={item.product_img} alt={item.name} />
                   <div>
                     <h3>{item.name}</h3>
                     <p>Quantidade: {item.quantity}</p>
