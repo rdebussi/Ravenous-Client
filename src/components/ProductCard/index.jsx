@@ -22,7 +22,7 @@ function ProductCard({ product, onClose, addToCart }) {
   return (
     <section className={styles.ProductCard}>
       <div className={styles.img_area}>
-        <img className={styles.product_img} src={bk} alt={product.name} />
+        <img className={styles.product_img} src={product.product_img} alt={product.name} />
       </div>
 
       <div className={styles.right_session}>

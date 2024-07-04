@@ -1,11 +1,11 @@
 import styles from './RestaurantCard.module.css'
 import bk from '/bk.png'
 
-function RestaurantCard ({name, address}) {
+function RestaurantCard ({name, address, profile_pic}) {
     return (
         <section className={styles.RestaurantCard}>
             <div className={styles.logo_area}>
-                <img src={bk} alt="" />
+                <img src={profile_pic} alt="" />
             </div>
             <div className={styles.content}>
                 <h2>{name}</h2>
