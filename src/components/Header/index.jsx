@@ -3,7 +3,7 @@ import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ onCartClick }) => {
     return (
         <header className={styles.header}>
             <div className={styles.first}>
@@ -27,7 +27,7 @@ const Header = () => {
             <div className={styles.rightSection}>
                 <h3 className={styles.address}>R. Dolores Dutra de Moraes, 39</h3>
                 <button className={styles.loginButton}>Login</button>
-                <FaShoppingCart className={styles.cartIcon} />
+                <FaShoppingCart onClick={onCartClick} className={styles.cartIcon} />
             </div>
         </header>
     );

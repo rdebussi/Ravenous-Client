@@ -102,8 +102,9 @@
     background-color: #ffffff;
     max-width: 90%;
     display: flex;
-    gap: .3rem;
+    gap: .8rem;
     justify-content: end; 
+    align-items: center;
 }
 
 .btn_buy {
@@ -123,7 +124,7 @@
     transition: .2s ease-in-out;
 }
 
-.btn_qtd {
+/* .btn_qtd {
     height: 60px;
     width: 90px;
     font-size: 1.1rem;
@@ -131,7 +132,28 @@
     border: none;
     border-radius: 5px;
     letter-spacing: .2rem;
+} */
+
+.qtd_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+  
+  .btn_qtd {
+    height: 35px;
+    width: 35px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+  }
+  
+  .quantity {
+    margin: 0 12px;
+  }
+  
+
 
 /* gpt */
 

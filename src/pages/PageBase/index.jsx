@@ -2,10 +2,10 @@ import { Outlet } from "react-router-dom";
 import Container from "../../components/Container";
 import Header from "../../components/Header";
 
-function PageBase () {
+function PageBase ({ onCartClick }) {
     return (
         <>
-            <Header/>
+            <Header onCartClick={onCartClick}/>
             <Container>
                 <Outlet/>
             </Container>

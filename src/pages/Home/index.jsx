@@ -4,7 +4,7 @@ import Card from '../../components/Card';
 import ProductCard from '../../components/ProductCard';
 import styles from './Home.module.css';
 
-function Home() {
+function Home({ addToCart }) {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
@@ -43,7 +43,7 @@ function Home() {
       )}
       {selectedProduct && (
         <div className={styles.productCardOverlay}>
-          <ProductCard product={selectedProduct} onClose={handleCloseProductCard} />
+          <ProductCard product={selectedProduct} onClose={handleCloseProductCard} addToCart={addToCart}/>
         </div>
       )}
     </section>

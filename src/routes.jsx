@@ -4,12 +4,12 @@ import Home from "./pages/Home";
 import Restaurants from "./pages/Restaurants";
 
 
-function AppRoutes() {
+function AppRoutes({ addToCart, toggleCartVisibility }) {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <PageBase /> }>
-                    <Route index element={ <Home /> }></Route>
+                <Route path="/" element={ <PageBase onCartClick={toggleCartVisibility} /> }>
+                    <Route index element={ <Home addToCart={addToCart} /> }></Route>
                     <Route path="/restaurants" element={<Restaurants/> }></Route>
                 </Route>
             </Routes>

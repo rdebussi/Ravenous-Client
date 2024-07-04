@@ -1,12 +1,24 @@
 // ProductCard.js
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProductCard.module.css';
 import { FaStore } from "react-icons/fa";
 import bk from '/hamburguer.webp'
 import { IoCloseSharp } from "react-icons/io5";
 
 
-function ProductCard({ product, onClose }) {
+function ProductCard({ product, onClose, addToCart }) {
+
+ 
+    const [quantity, setQuantity] = useState(1);
+  
+    const handleQuantityChange = (amount) => {
+      setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount));
+    };
+  
+    const totalPrice = product.price * quantity;
+
+
+
   return (
     <section className={styles.ProductCard}>
       <div className={styles.img_area}>
@@ -32,8 +44,22 @@ function ProductCard({ product, onClose }) {
         </div>
 
         <div className={styles.button_area}>
-          <button className={styles.btn_qtd}>- 1 +</button>
-          <button className={styles.btn_buy}>Adicionar R$ {product.price}</button>
+          <div className={styles.qtd_area}>
+            <button 
+              className={styles.btn_qtd} 
+              onClick={() => handleQuantityChange(-1)}
+            >-</button>
+            <span className={styles.quantity}>{quantity}</span>
+            <button 
+              className={styles.btn_qtd} 
+              onClick={() => handleQuantityChange(1)}
+            >+</button>
+          </div>
+          <button className={styles.btn_buy} 
+            onClick={() => { addToCart(product, quantity); onClose(); }}
+            >
+            Adicionar R$ {totalPrice.toFixed(2)}
+          </button>
         </div>
         <button onClick={onClose} className={styles.closeButton}>{<IoCloseSharp/>}</button>
       </div>
