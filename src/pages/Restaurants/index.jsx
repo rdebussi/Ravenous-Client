@@ -28,7 +28,7 @@ function Restaurants() {
               <section className={styles.restaurant_list}>
                 {
                   restaurants.map((r) => (
-                    <RestaurantCard key={r.id} name={r.name} address={r.adress} profile_pic={r.profile_pic}/>
+                    <RestaurantCard key={r.id} restaurant={r}/>
                   ))
                 }
               </section>

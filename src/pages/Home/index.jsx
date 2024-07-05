@@ -35,7 +35,7 @@ function Home({ addToCart }) {
       {products.length > 0 ? (
         <section className={styles.list}>
           {products.map((p) => (
-            <Card key={p.id} name={p.name} price={p.price} product_img={p.product_img} restaurant_pic={p.restaurant.profile_pic} onClick={() => handleProductClick(p)} />
+            <Card key={p.id} product={p} onClick={() => handleProductClick(p)} />
           ))}
         </section>
       ) : (

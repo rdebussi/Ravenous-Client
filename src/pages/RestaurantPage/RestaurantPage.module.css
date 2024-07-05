@@ -1,0 +1,63 @@
+.information {
+    width: 85%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px #ccc solid;
+    border-bottom: 1px #ccc solid;
+}
+
+.information img {
+    height: 80px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.left h1 {
+    font-size: 2.2rem;
+}
+
+.rigth {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+}
+
+.text {
+    width: 85%;
+    padding-top: 4rem;
+}
+
+.text h2 {
+    font-weight: 400;
+}
+
+.list {
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCardOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  

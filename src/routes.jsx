@@ -12,7 +12,7 @@ function AppRoutes({ addToCart, toggleCartVisibility }) {
                 <Route path="/" element={ <PageBase onCartClick={toggleCartVisibility} /> }>
                     <Route index element={ <Home addToCart={addToCart} /> }></Route>
                     <Route path="/restaurants" element={<Restaurants/> }></Route>
-                    <Route path="/restaurants/:restaurantId" element={<RestaurantPage/>}></Route>
+                    <Route path="/restaurants/:restaurantId" element={<RestaurantPage addToCart={addToCart}/>}></Route>
                 </Route>
             </Routes>
         </BrowserRouter>

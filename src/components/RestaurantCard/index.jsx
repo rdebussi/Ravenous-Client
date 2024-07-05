@@ -1,18 +1,21 @@
+import { Link } from 'react-router-dom'
 import styles from './RestaurantCard.module.css'
 import bk from '/bk.png'
 
-function RestaurantCard ({name, address, profile_pic}) {
+function RestaurantCard ({restaurant}) {
     return (
+        <Link to={`/restaurants/${restaurant.id}`}>
         <section className={styles.RestaurantCard}>
             <div className={styles.logo_area}>
-                <img src={profile_pic} alt="" />
+                <img src={restaurant.profile_pic} alt="" />
             </div>
             <div className={styles.content}>
-                <h2>{name}</h2>
-                <p>{address}</p>
-                <p>32 9999-9999</p>
-            </div>
+                    <h2>{restaurant.name}</h2>
+                    <p>{restaurant.adress}</p>
+                    <p>{restaurant.openning_hours}</p>
+                </div>
         </section>
+        </Link>
     )
 }
 

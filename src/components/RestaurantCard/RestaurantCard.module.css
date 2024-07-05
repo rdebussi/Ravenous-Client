@@ -9,6 +9,11 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.RestaurantCard:hover {
+    transform: scale(1.03);
+    transition: .3s ease-in-out;
+}
+
 .logo_area {
     height: 120px;
     width: 120px;
@@ -34,4 +39,9 @@
 
 .content p{
     font-weight: 300;
+}
+
+section a {
+    text-decoration: none;
+    color: black;
 }
