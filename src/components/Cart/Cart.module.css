@@ -23,14 +23,14 @@
     flex-direction: column;
     gap: 2rem;
     justify-content: space-between;
-    -webkit-animation-name: show-cart;
-    -webkit-animation-duration:1s;
-    -webkit-animation-iteration-count:1;
-    -webkit-animation-delay:0s;
-    -webkit-animation-fill-mode: forwards;
+    animation-name: show-cart;
+    animation-duration:1s;
+    animation-iteration-count: 1;
+    animation-delay:0s;
+    animation-fill-mode: forwards;
   }
 
-  @-webkit-keyframes show-cart {
+  @keyframes show-cart {
     100% {
         transform: translateX(0);
     }
