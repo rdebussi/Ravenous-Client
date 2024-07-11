@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
 
 const Header = ({ onCartClick }) => {
+
+    const inputRef = useRef();
+    const focusInput = () => {
+        inputRef.current.focus();
+    }
+
     return (
         <header className={styles.header}>
             <div className={styles.first}>
@@ -20,8 +26,8 @@ const Header = ({ onCartClick }) => {
             </div>
 
             <div className={styles.searchContainer}>
-                <FaSearch className={styles.searchIcon} />
-                <input type="text" placeholder="Buscar" className={styles.searchInput} />
+                <button className={styles.searchButton} onClick={focusInput}><FaSearch className={styles.searchIcon} /></button>
+                <input type="text" placeholder="Buscar" className={styles.searchInput} ref={inputRef}/>
             </div>
 
             <div className={styles.rightSection}>

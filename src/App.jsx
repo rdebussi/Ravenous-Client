@@ -1,7 +1,7 @@
 // App.jsx
 import './App.css';
 import AppRoutes from './routes';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Cart from './components/Cart';
 
 function App() {
@@ -18,6 +18,8 @@ function App() {
       alert('Não é possível adicionar produtos de Restaurantes diferentes no carrinho')
       return;
     }
+
+    
 
     setRestaurantName(product.restaurant.name);
 

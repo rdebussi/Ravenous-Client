@@ -8,6 +8,8 @@ function Home({ addToCart }) {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
+
+
   useEffect(() => {
     const searchProducts = async () => {
       try {
@@ -23,6 +25,7 @@ function Home({ addToCart }) {
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
+    console.log(product)
   };
 
   const handleCloseProductCard = () => {

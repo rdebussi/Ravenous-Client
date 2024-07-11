@@ -1,5 +1,5 @@
 // ProductCard.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './ProductCard.module.css';
 import { FaStore } from "react-icons/fa";
 import bk from '/hamburguer.webp'
@@ -14,7 +14,8 @@ function ProductCard({ product, onClose, addToCart }) {
     const handleQuantityChange = (amount) => {
       setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount));
     };
-  
+
+ 
     const totalPrice = product.price * quantity;
 
 
