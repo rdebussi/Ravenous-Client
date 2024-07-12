@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Card from '../../components/Card';
 import ProductCard from '../../components/ProductCard';
 import styles from './Home.module.css';
+import axios from 'axios';
 
 function Home({ addToCart }) {
   const [products, setProducts] = useState([]);
@@ -13,9 +14,9 @@ function Home({ addToCart }) {
   useEffect(() => {
     const searchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:1010/product');
-        const data = await response.json();
-        setProducts(data);
+        const response = await axios.get('http://localhost:1010/product');
+        console.log(response)
+        setProducts(response.data);
       } catch (err) {
         console.error(err);
       }

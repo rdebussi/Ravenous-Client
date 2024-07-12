@@ -1,9 +1,13 @@
-import React, { useRef } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { FaSearch, FaShoppingCart } from 'react-icons/fa';
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
+import AuthContext from '../../context/authContext';
+
+
 
 const Header = ({ onCartClick }) => {
+    const { auth, logout } = useContext(AuthContext);
 
     const inputRef = useRef();
     const focusInput = () => {
@@ -31,8 +35,9 @@ const Header = ({ onCartClick }) => {
             </div>
 
             <div className={styles.rightSection}>
-                <h3 className={styles.address}>R. Dolores Dutra de Moraes, 39</h3>
-                <button className={styles.loginButton}>Login</button>
+                {auth.isAuthenticated ? <h3 className={styles.address}>{auth.user.adress}</h3> : <h3 className={styles.address}>faça login</h3>}
+                {auth.isAuthenticated ? <button onClick={logout} className={styles.loginButton}>Logout</button>
+                :<Link to="/login" className={styles.loginButton}>Login</Link>}
                 <FaShoppingCart onClick={onCartClick} className={styles.cartIcon} />
             </div>
         </header>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import RestaurantCard from '../../components/RestaurantCard'
 import styles from './Restaurants.module.css'
+import axios from 'axios'
 
 function Restaurants() {
 
@@ -9,10 +10,8 @@ function Restaurants() {
     useEffect(() => {
       const searchRestaurants = async () => {
         try {
-          const response = await fetch('http://localhost:1010/restaurant')
-          const data = await response.json()
-          setRestaurants(data)
-          console.log(data)
+          const response = await axios.get('http://localhost:1010/restaurant')
+          setRestaurants(response.data)
         } catch(err){
           console.error(err)
         }

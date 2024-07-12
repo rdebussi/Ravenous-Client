@@ -3,11 +3,38 @@ import './App.css';
 import AppRoutes from './routes';
 import { useEffect, useState } from 'react';
 import Cart from './components/Cart';
+import axios from 'axios';
+
 
 function App() {
   const [cartVisible, setCartVisible] = useState(false);
   const [cartItems, setCartItems] = useState([]);
   const [restaurantName, setRestaurantName] = useState('');
+
+  // const submitForm = async () => {
+  //   try {
+  //     let registration = await axios.post("http://localhost:1010/login", {
+  //     email: "admin", password: "admin"})
+  //     console.log(registration)
+  //     localStorage.setItem("x-access-token", registration.data.token)
+  //   } catch (err) {
+  //     console.error(err.message)
+  //   }
+  // } 
+  
+
+
+
+
+  //   const token = localStorage.getItem("x-access-token");
+    
+  //   axios.defaults.headers.common = {
+  //     "X-Requested-With": "XMLHttpRequest",
+  //     "x-access-token": token
+  //   } 
+
+
+  
 
   const toggleCartVisibility = () => {
     setCartVisible(!cartVisible);

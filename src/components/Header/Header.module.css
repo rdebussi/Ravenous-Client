@@ -94,12 +94,24 @@
     background-color: green;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.loginButton:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in;
 }
 
 .cartIcon {
     font-size: 2rem;
     cursor: pointer;
     color: green;
+}
+
+.cartIcon:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in;
 }
 
 textarea:focus, input:focus, select:focus {

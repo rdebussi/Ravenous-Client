@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './RestaurantPage.module.css'
 import Card from "../../components/Card";
 import ProductCard from "../../components/ProductCard";
+import axios from "axios";
 
 function RestaurantPage({ addToCart }) {
     const { restaurantId } = useParams()
@@ -14,9 +15,8 @@ function RestaurantPage({ addToCart }) {
     useEffect(() => {
         const searchRestaurant = async () => {
             try {
-                const response = await fetch(`http://localhost:1010/restaurant/${restaurantId}`);
-                const data = await response.json();
-                setRestaurant(data);
+                const response = await axios.get(`http://localhost:1010/restaurant/${restaurantId}`);
+                setRestaurant(response.data);
             } catch (err) {
                 console.error(err);
             }
@@ -27,9 +27,8 @@ function RestaurantPage({ addToCart }) {
     useEffect(() => {
         const searchProducts = async () => {
             try {
-                const response = await fetch(`http://localhost:1010/product/restaurant/${restaurantId}`);
-                const data = await response.json();
-                setProducts(data)
+                const response = await axios.get(`http://localhost:1010/product/restaurant/${restaurantId}`);
+                setProducts(response.data)
             } catch (err) {
                 console.error(err)
             }
