@@ -1,5 +1,5 @@
 # Ravenous Food
-Projeto inspirado no Ifood
+Projeto inspirado no Ifood, onde desenvolvi uma API utilizando o Node.js, Mysql/Sequelize para lidar com o banco e React.js para fazer o front-end
 
 ### Tecnologias
 - React
@@ -8,6 +8,7 @@ Projeto inspirado no Ifood
   
 ### Screenshoots
 
-<img alt="Screenshot" title="Screenshot" src="./docs/images/1.jpg" width="150px" />        <img alt="Screenshot" title="Screenshot" src="./docs/images/2.jpg" width="150px" />        <img alt="Screenshot" title="Screenshot" src="./docs/images/3.jpg" width="150px" />       <img alt="Screenshot" title="Screenshot" src="./docs/images/4.jpg" width="150px" />
+<img alt="Screenshot" title="Screenshot" src="./images/1.png" width="500px" />        <img alt="Screenshot" title="Screenshot" src="./images/5.png" width="500px" />        <img alt="Screenshot" title="Screenshot" src="./images/4.png" width="500px" />       <img alt="Screenshot" title="Screenshot" src="./images/3.png" width="500px" /> 
+<img alt="Screenshot" title="Screenshot" src="./images/2.png" width="500px" />
 
 ### desenvolvido por Rafael Debussi
