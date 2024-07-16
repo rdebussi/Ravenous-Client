@@ -1,8 +1,13 @@
-# React + Vite
+# Ravenous Food
+Projeto inspirado no Ifood
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Tecnologias
+- React
+- Node
+- Mysql
+  
+### Screenshoots
 
-Currently, two official plugins are available:
+<img alt="Screenshot" title="Screenshot" src="./docs/images/1.jpg" width="150px" />        <img alt="Screenshot" title="Screenshot" src="./docs/images/2.jpg" width="150px" />        <img alt="Screenshot" title="Screenshot" src="./docs/images/3.jpg" width="150px" />       <img alt="Screenshot" title="Screenshot" src="./docs/images/4.jpg" width="150px" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### desenvolvido por Rafael Debussi
